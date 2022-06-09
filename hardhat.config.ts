@@ -1,5 +1,6 @@
 import * as dotenv from "dotenv";
 
+import "@tenderly/hardhat-tenderly";
 import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
@@ -27,6 +28,7 @@ const config: HardhatUserConfig = {
   networks: {
     tenderly: {
       url: process.env.TENDERLY_FORK_URL || "",
+      chainId: 1,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
     },
@@ -38,7 +40,7 @@ const config: HardhatUserConfig = {
   tenderly: {
       project: "test",
       username: "filippetroviccc",
-      forkNetwork: "main",
+      forkNetwork: "1",
   }
 };
 

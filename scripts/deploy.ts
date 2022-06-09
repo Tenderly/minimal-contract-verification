@@ -3,7 +3,6 @@
 //
 // When running the script with `npx hardhat run <script>` you'll find the Hardhat
 // Runtime Environment's members available in the global scope.
-import "@tenderly/hardhat-tenderly";
 import * as hre from "hardhat";
 
 async function main() {
@@ -15,13 +14,16 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
+  await hre.run('compile');
+  await hre.tenderly.network().setFork(process.env.TENDERLY_FORK_ID)
   const Greeter = await hre.ethers.getContractFactory("Greeter");
   const greeter = await Greeter.deploy("Hello, Hardhat!");
-  await hre.tenderly.persistArtifacts([{
+
+  await hre.tenderly.persistArtifacts({
       name: "Greeter",
       address: greeter.address,
-  }])
-  await hre.tenderly.verify({
+  })
+  await hre.tenderly.network().verify({
       name: "Greeter",
       address: greeter.address,
   })
