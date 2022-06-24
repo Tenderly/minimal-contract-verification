@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "deploy-fork": "npx hardhat run scripts/deploy_fork.ts --network tenderly",
+    "deploy-ropsten": "npx hardhat run scripts/deploy.ts --network ropsten",
+    "deploy-fork:hh-deploy": "npx hardhat deploy --network tenderly"
+  },
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.0",
     "@nomiclabs/hardhat-etherscan": "^3.0.0",
     "@nomiclabs/hardhat-waffle": "^2.0.0",
-    "@tenderly/hardhat-tenderly": "^1.1.0-beta.8",
+    "@tenderly/hardhat-tenderly": "^1.1.0",
     "@typechain/ethers-v5": "^7.0.1",
     "@typechain/hardhat": "^2.3.0",
     "@types/chai": "^4.2.21",
@@ -32,8 +37,12 @@
     "prettier-plugin-solidity": "^1.0.0-beta.13",
     "solhint": "^3.3.6",
     "solidity-coverage": "^0.7.16",
-    "ts-node": "^10.1.0",
+    "ts-node": "^10.8.1",
     "typechain": "^5.1.2",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0",
+    "hardhat-deploy": "^0.11.10"
   }
 }
