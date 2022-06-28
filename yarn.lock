@@ -837,10 +837,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tenderly/hardhat-tenderly@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@tenderly/hardhat-tenderly/-/hardhat-tenderly-1.1.0.tgz#bf737fb66079a774fbcfb383a176395933923ecd"
-  integrity sha512-LrsY6RN9IB3NKvs6o8bjkWKIiKnILylLCG+JHJx3fXfGc1Uh9K0wsx1MMvwH40PgK1WRmd9QVaFfXy6HLmXyqg==
+"@tenderly/hardhat-tenderly@^1.1.2":
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/@tenderly/hardhat-tenderly/-/hardhat-tenderly-1.1.2.tgz#11a4e17356eca08b3fd32f944ebe89ab24d6f5a6"
+  integrity sha512-f6C9zPPWZfLNRBMwZcdT4QaHYrUw7raSHiQznt/X380lhPMEpyubUrS6HdQPd8beAfu/kin0qu7OU1c6BPgqig==
   dependencies:
     "@nomiclabs/hardhat-ethers" "^2.0.6"
     axios "^0.21.1"

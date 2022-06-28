@@ -65,9 +65,9 @@ const config: HardhatUserConfig = {
     tenderly: {
         project: process.env.TENDERLY_PROJECT_SLUG || "",
         username: process.env.TENDERLY_USERNAME || "",
-        forkNetwork: "1",
-        privateVerification: true,
-        deploymentsDir: "tdly_dep"
+        // forkNetwork: "1",
+        // privateVerification: true,
+        // deploymentsDir: "tdly_dep"
     },
 };
 

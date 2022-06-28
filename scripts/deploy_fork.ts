@@ -18,15 +18,14 @@ async function main() {
 
     const Greeter = await hre.ethers.getContractFactory("Greeter");
     const greeter = await Greeter.deploy("Hello, Hardhat!");
+    await greeter.deployed();
 
     const Greeter2 = await hre.ethers.getContractFactory("Greeter2");
     const greeter2 = await Greeter2.deploy("Hello, Hardhat!");
+    await greeter2.deployed();
 
     const Greeter3 = await hre.ethers.getContractFactory("Greeter3");
     const greeter3 = await Greeter3.deploy("Hello, Hardhat!");
-
-    await greeter.deployed();
-    await greeter2.deployed();
     await greeter3.deployed();
 
     await greeter.setGreeting("heyho");
